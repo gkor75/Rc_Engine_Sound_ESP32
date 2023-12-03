@@ -11,8 +11,8 @@
 
 // Debug settings -----------------------------------------------------------------------------------------------------------------------------------
 // DEBUG options can slow down the playback loop! Only uncomment them for debugging, may slow down your system!
-//#define DEBUG // More infos such as EEPROM dump on serial monitor, if defined
-//#define CHANNEL_DEBUG // uncomment it for input signal & general debugging informations
+#define DEBUG // More infos such as EEPROM dump on serial monitor, if defined
+#define CHANNEL_DEBUG // uncomment it for input signal & general debugging informations
 //#define ESC_DEBUG // uncomment it to debug the ESC
 //#define AUTO_TRANS_DEBUG // uncomment it to debug the automatic transmission
 //#define MANUAL_TRANS_DEBUG // uncomment it to debug the manual transmission
@@ -27,7 +27,7 @@ uint8_t eeprom_id = 2; // change this id (between 1 and 255, compare with serial
 // only define it in order to clean up junk from old projects in your EEPROM
 
 // Wireless settings -------------------------------------------------------------------------------------------------------------------------------
-#define ENABLE_WIRELESS // Define this, if you want to use an ESP-Now wireless trailer or the WiFi configuration via 192.168.4.1
+// #define ENABLE_WIRELESS // Define this, if you want to use an ESP-Now wireless trailer or the WiFi configuration via 192.168.4.1
 
 /* Wifi & ESP-Now and ESP-Now transmission power: less power = less speaker noise & longer battery life. Valid options are:
 WIFI_POWER_19_5dBm = 78     // full power
