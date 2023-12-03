@@ -24,7 +24,7 @@
 // PWM mode active, if SBUS, IBUS, SUMD and PPM are disabled (// in front of #define)
 
 // SBUS communication (RX header, 13 channels. This is my preferred communication protocol)--------
-// #define SBUS_COMMUNICATION // control signals are coming in via the SBUS interface (comment it out for classic PWM RC signals)
+#define SBUS_COMMUNICATION // control signals are coming in via the SBUS interface (comment it out for classic PWM RC signals)
 // NOTE: "boolean sbusInverted = true / false" was moved to the remote configuration profiles, so you don't have to change it
 uint32_t sbusBaud = 100000;         // Standard is 100000. Try to lower it, if your channels are coming in unstable. Working range is about 96000 - 104000.
 #define EMBEDDED_SBUS               // Embedded SBUS code is used instead of SBUS library, if defined (recommended)
@@ -729,12 +729,12 @@ boolean channelReversed[14] = {
 // Channels auto zero adjustment or not (don't use it for channels without spring centered neutral position, switches or unused channels)
 boolean channelAutoZero[14] = {
     false, // CH0 (unused)
-    true,  // CH1
+    false,  // CH1
     false, // CH2
     false,  // CH3
     false, // CH4
-    true,  // CH5
-    true,  // CH6
+    false,  // CH5
+    false,  // CH6
     false, // CH7
     false, // CH8
     false, // CH9
@@ -754,6 +754,6 @@ const uint16_t pulseSpan = 480;
 // #define AUTO_INDICATORS
 
 // SBUS mode ----
-boolean sbusInverted = true; // true = standard (non inverted) SBUS signal
+boolean sbusInverted = false; // true = standard (non inverted) SBUS signal
 
 #endif
